@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essilor.ProjetApi", "Essilor.ProjetApi\Essilor.ProjetApi.csproj", "{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essilor.ProjetApiTets", "Essilor.ProjetApiTets\Essilor.ProjetApiTets.csproj", "{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {590ACC4D-2EFB-486D-9875-5AE261D75A81}
+	EndGlobalSection
+EndGlobal
