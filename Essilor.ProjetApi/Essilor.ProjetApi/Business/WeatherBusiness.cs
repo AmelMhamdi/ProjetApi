@@ -10,6 +10,7 @@ namespace Essilor.ProjetApi.Business
     public class WeatherBusiness: IWeatherBusiness
     {
         private IWeatherRepository weatherRepository;
+
         public WeatherBusiness(IWeatherRepository weatherRepository)
         {
             this.weatherRepository = weatherRepository;

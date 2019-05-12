@@ -46,6 +46,8 @@ namespace Essilor.ProjetApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Weather API V1");
                 c.RoutePrefix = string.Empty;
             });
+
+            app.UseMvc();
         }
     }
 }

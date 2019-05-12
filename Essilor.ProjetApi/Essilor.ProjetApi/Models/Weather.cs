@@ -7,9 +7,7 @@ namespace Essilor.ProjetApi.Models
 {
     public class Weather
     {
-        public int Id { get; set; }
-
-        public double Tempurature { get; set; }
+        public double Temperature { get; set; }
 
         public string City { get; set; }
 

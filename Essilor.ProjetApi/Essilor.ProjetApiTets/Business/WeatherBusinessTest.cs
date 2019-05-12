@@ -21,8 +21,7 @@ namespace Essilor.ProjetApiTets.Business
             {
                 new Weather()
                 {
-                    Id=1,
-                    Tempurature=25.3,
+                    Temperature=25.3,
                       City="Boston",
                       Country="US"
 
@@ -42,8 +41,7 @@ namespace Essilor.ProjetApiTets.Business
             Assert.IsNotNull(res);
             Assert.AreEqual(res.First().Country, listWeather.First().Country);
             Assert.AreEqual(res.First().City, listWeather.First().City);
-            Assert.AreEqual(res.First().Id, listWeather.First().Id);
-            Assert.AreEqual(res.First().Tempurature, listWeather.First().Tempurature);
+            Assert.AreEqual(res.First().Temperature, listWeather.First().Temperature);
         }
     }
 }
