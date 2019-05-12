@@ -11,3 +11,4 @@
   - the first page is a swagger page how display all action in this api
   you can choose the endpoint to test it 
   the swagger page look like this
+https://user-images.githubusercontent.com/15520779/57588161-a59d8080-7510-11e9-9259-61e111c4c322.png
