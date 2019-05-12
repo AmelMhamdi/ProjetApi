@@ -13,3 +13,12 @@
   the swagger page look like this
   ![alt text](https://user-images.githubusercontent.com/15520779/57588161-a59d8080-7510-11e9-9259-61e111c4c322.png)
 
+# demonstration
+
+This application respect the separation of concern 
+you can find the use of interface to declare the method used in 
+different layer.
+
+And you inject all interface in the configureservices method in Startup.cs file.
+the controller inject the business class and the business class inject the repository class
+with this method we facilitate the test of same layer of your application.
