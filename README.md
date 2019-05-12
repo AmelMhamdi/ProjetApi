@@ -22,3 +22,9 @@ different layer.
 And you inject all interface in the configureservices method in Startup.cs file.
 the controller inject the business class and the business class inject the repository class
 with this method we facilitate the test of same layer of your application.
+ * display the gatall action from swagger interface
+ 
+# unit test
+to test this application i used nunitframexork and mock
+
+- mock to mock the class and used it in the methode to test.
