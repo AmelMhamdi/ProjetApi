@@ -24,6 +24,9 @@ the controller inject the business class and the business class inject the repos
 with this method we facilitate the test of same layer of your application.
  * display the gatall action from swagger interface
  
+ ![alt text](https://user-images.githubusercontent.com/15520779/57588340-0d54cb00-7513-11e9-9c9c-95c194c33fbb.png)
+  - response: 
+  ![alt text](https://user-images.githubusercontent.com/15520779/57588354-4d1bb280-7513-11e9-90f8-c5d66cf7834c.png)
 # unit test
 to test this application i used nunitframexork and mock
 
