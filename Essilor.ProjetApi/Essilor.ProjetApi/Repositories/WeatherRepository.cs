@@ -12,6 +12,17 @@ namespace Essilor.ProjetApi.Repositories
     {
         public IEnumerable<Weather> GetAllWeather()
         {
+            return GetDataFromJsonFile();
+        }
+
+        public IEnumerable<Weather> GetWeatherByCountry(string country)
+        {
+            var listWeather = GetDataFromJsonFile();
+            return listWeather.Where(_ => _.Country == country);
+        }
+
+        private IEnumerable<Weather> GetDataFromJsonFile()
+        {
             var path = "wwwroot/Data/base.json";
             var result = new List<Weather>();
 
@@ -21,7 +32,6 @@ namespace Essilor.ProjetApi.Repositories
                 var convertedJson = JsonConvert.DeserializeObject<List<Weather>>(initialJson);
                 result.AddRange(convertedJson);
             }
-
             return result;
         }
     }

@@ -9,5 +9,7 @@ namespace Essilor.ProjetApi.Interfaces
     public interface IWeatherBusiness
     {
         IEnumerable<Weather> GetAllWeather();
+
+        IEnumerable<Weather> GetWeatherByCountry(string country);
     }
 }

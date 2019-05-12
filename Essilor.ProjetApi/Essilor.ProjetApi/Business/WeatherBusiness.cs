@@ -21,5 +21,10 @@ namespace Essilor.ProjetApi.Business
         {
             return this.weatherRepository.GetAllWeather();
         }
+
+        public IEnumerable<Weather> GetWeatherByCountry(string country)
+        {
+            return this.weatherRepository.GetWeatherByCountry(country);
+        }
     }
 }

@@ -21,13 +21,28 @@ namespace Essilor.ProjetApi.Controllers
         }
 
         [HttpGet("GetAllWeather")]
-        [ProducesResponseType(typeof(Weather), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(IEnumerable<Weather>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult GetAllWeather()
         {
            try
             {
                 return Ok(this.weatherBusiness.GetAllWeather());
+            }
+            catch
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        [HttpGet("GetWeatherByCountry")]
+        [ProducesResponseType(typeof(IEnumerable<Weather>), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        public IActionResult GetWeatherByCountry(string country)
+        {
+            try
+            {
+                return Ok(this.weatherBusiness.GetWeatherByCountry(country));
             }
             catch
             {
