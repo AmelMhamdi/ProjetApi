@@ -9,10 +9,11 @@ the temperatures of the different cuntry and city,
 after adding a little parameter is to display the cuntry temperature chosen by the user.
 
 # Installation
-  you must download the code from git and use visual studio 2017 to open it
+  you must download the code from git and use visual studio 2017 (you can download Vs2017 from    https://visualstudio.microsoft.com/fr/downloads/) to open it
   and build the solution finaly you can run this application on iis express 
   - you can display the first page to test this application
   - the first page is a swagger page how display all action in this api
+  (documentatuin swagger : https://swagger.io/tools/swagger-ui/)
   you can choose the endpoint to test it 
   the swagger page look like this
   ![alt text](https://user-images.githubusercontent.com/15520779/57588161-a59d8080-7510-11e9-9259-61e111c4c322.png)
