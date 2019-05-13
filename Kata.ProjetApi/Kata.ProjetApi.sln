@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.WeatherProjectApi", "Essilor.ProjetApi\Kata.WeatherProjectApi.csproj", "{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.WeatherProjectApi", "Kata.ProjetApi\Kata.WeatherProjectApi.csproj", "{D5BE5FD9-B1D6-4D8E-B0F6-7C53EDB861BA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.WeatherProjectApiTest", "Essilor.ProjetApiTets\Kata.WeatherProjectApiTest.csproj", "{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kata.WeatherProjectApiTest", "Kata.ProjetApiTets\Kata.WeatherProjectApiTest.csproj", "{FD897F87-F0E5-4D25-A1EC-EFE5F3162F57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

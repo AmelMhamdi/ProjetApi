@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Essilor.ProjetApi\Kata.WeatherProjectApi.csproj" />
+    <ProjectReference Include="..\Kata.ProjetApi\Kata.WeatherProjectApi.csproj" />
   </ItemGroup>
 
 </Project>
