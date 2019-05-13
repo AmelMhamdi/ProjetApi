@@ -1,17 +1,17 @@
-﻿using Essilor.ProjetApi.Interfaces;
-using Essilor.ProjetApi.Models;
+﻿using Kata.WeatherProjectApi.Interfaces;
+using Kata.WeatherProjectApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Essilor.ProjetApi.Business
+namespace Kata.WeatherProjectApi.Business
 {
-    public class WeatherBusiness: IWeatherBusiness
+    public class WeatherService: IWeatherService
     {
         private IWeatherRepository weatherRepository;
 
-        public WeatherBusiness(IWeatherRepository weatherRepository)
+        public WeatherService(IWeatherRepository weatherRepository)
         {
             this.weatherRepository = weatherRepository;
 

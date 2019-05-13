@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Essilor.ProjetApi.Business;
-using Essilor.ProjetApi.Interfaces;
-using Essilor.ProjetApi.Repositories;
+using Kata.WeatherProjectApi.Business;
+using Kata.WeatherProjectApi.Interfaces;
+using Kata.WeatherProjectApi.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -12,7 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace Essilor.ProjetApi
+namespace Kata.WeatherProjectApi
 {
     public class Startup
     {
@@ -21,7 +21,7 @@ namespace Essilor.ProjetApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddScoped<IWeatherBusiness, WeatherBusiness>();
+            services.AddScoped<IWeatherService, WeatherService>();
             services.AddScoped<IWeatherRepository, WeatherRepository>();
 
             services.AddSwaggerGen(c =>

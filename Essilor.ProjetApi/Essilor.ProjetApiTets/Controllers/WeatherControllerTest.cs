@@ -1,7 +1,7 @@
-﻿using Essilor.ProjetApi.Controllers;
-using Essilor.ProjetApi.Interfaces;
-using Essilor.ProjetApi.Models;
-using Essilor.ProjetApi.Repositories;
+﻿using Kata.WeatherProjectApi.Controllers;
+using Kata.WeatherProjectApi.Interfaces;
+using Kata.WeatherProjectApi.Models;
+using Kata.WeatherProjectApi.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Essilor.ProjetApiTets.Controllers
+namespace Kata.WeatherProjectApiTets.Controllers
 {
     public class WeatherControllerTest
     {
@@ -32,15 +32,15 @@ namespace Essilor.ProjetApiTets.Controllers
 
 
             Mock<IWeatherRepository> mockedrepository = new Mock<IWeatherRepository>();
-            Mock<IWeatherBusiness> mockedBusiness = new Mock<IWeatherBusiness>() { CallBase = true };
+            Mock<IWeatherService> mockedBusiness = new Mock<IWeatherService>() { CallBase = true };
             mockedrepository.Setup(c => c.GetAllWeather()).Returns(listWeather);
             mockedBusiness.Setup(c => c.GetAllWeather()).Returns(listWeather);
             WeatherController controller = new WeatherController(mockedBusiness.Object);
-            var result=controller.GetAllWeather();
+            var result = controller.GetAllWeather();
             var okResult = result as OkObjectResult;
             Assert.IsNotNull(okResult);
-            Assert.AreEqual( okResult.Value,listWeather);
-            Assert.AreEqual(StatusCodes.Status200OK, okResult.StatusCode);
+            Assert.That(okResult.Value == listWeather);
+            Assert.That(StatusCodes.Status200OK == okResult.StatusCode);
         }
 
     }

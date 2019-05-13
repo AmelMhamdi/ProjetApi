@@ -1,12 +1,12 @@
-﻿using Essilor.ProjetApi.Interfaces;
-using Essilor.ProjetApi.Models;
+﻿using Kata.WeatherProjectApi.Interfaces;
+using Kata.WeatherProjectApi.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Essilor.ProjetApi.Repositories
+namespace Kata.WeatherProjectApi.Repositories
 {
     public class WeatherRepository : IWeatherRepository
     {

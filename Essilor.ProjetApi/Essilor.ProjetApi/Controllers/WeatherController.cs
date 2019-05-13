@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Essilor.ProjetApi.Interfaces;
-using Essilor.ProjetApi.Models;
+using Kata.WeatherProjectApi.Interfaces;
+using Kata.WeatherProjectApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Essilor.ProjetApi.Controllers
+namespace Kata.WeatherProjectApi.Controllers
 {
     [Route("")]
     [ApiController]
     public class WeatherController : ControllerBase
     {
-        private IWeatherBusiness weatherBusiness;
+        private IWeatherService WeatherService;
 
-        public WeatherController(IWeatherBusiness weatherBusiness)
+        public WeatherController(IWeatherService WeatherService)
         {
-            this.weatherBusiness = weatherBusiness;
+            this.WeatherService = WeatherService;
         }
 
         [HttpGet("GetAllWeather")]
@@ -27,7 +27,7 @@ namespace Essilor.ProjetApi.Controllers
         {
            try
             {
-                return Ok(this.weatherBusiness.GetAllWeather());
+                return Ok(this.WeatherService.GetAllWeather());
             }
             catch
             {
@@ -42,7 +42,7 @@ namespace Essilor.ProjetApi.Controllers
         {
             try
             {
-                return Ok(this.weatherBusiness.GetWeatherByCountry(country));
+                return Ok(this.WeatherService.GetWeatherByCountry(country));
             }
             catch
             {

@@ -1,12 +1,12 @@
-﻿using Essilor.ProjetApi.Models;
+﻿using Kata.WeatherProjectApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Essilor.ProjetApi.Interfaces
+namespace Kata.WeatherProjectApi.Interfaces
 {
-    public interface IWeatherBusiness
+    public interface IWeatherService
     {
         IEnumerable<Weather> GetAllWeather();
 

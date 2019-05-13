@@ -1,7 +1,7 @@
-﻿using Essilor.ProjetApi.Business;
-using Essilor.ProjetApi.Interfaces;
-using Essilor.ProjetApi.Models;
-using Essilor.ProjetApi.Repositories;
+﻿using Kata.WeatherProjectApi.Business;
+using Kata.WeatherProjectApi.Interfaces;
+using Kata.WeatherProjectApi.Models;
+using Kata.WeatherProjectApi.Repositories;
 using Moq;
 using NUnit.Framework;
 using System;
@@ -9,12 +9,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Essilor.ProjetApiTets.Business
+namespace Kata.WeatherProjectApiTets.Business
 {
-    public class WeatherBusinessTest
+    public class WeatherServiceTest
     {
         [Test]
-        public void GetAllWeather()
+        public void When_List_Weather_Not_Empty_GetAllWeather()
         {
             // arrange
             var listWeather = new List<Weather>()
@@ -29,19 +29,18 @@ namespace Essilor.ProjetApiTets.Business
             }.AsQueryable();
 
             Mock<IWeatherRepository> mockedRepository = new Mock<IWeatherRepository>() { CallBase = true };
-            WeatherBusiness mockedBusiness = new WeatherBusiness(mockedRepository.Object);
+            WeatherService mockedBusiness = new WeatherService(mockedRepository.Object);
+            mockedRepository.Setup(c => c.GetAllWeather()).Returns(listWeather);
 
             // act
-            mockedRepository.Setup(c => c.GetAllWeather()).Returns(listWeather);
             var res = mockedBusiness.GetAllWeather();
 
             //Assert
-
-            Assert.AreEqual(res.Count(), listWeather.Count());
+            Assert.That(res.Count() == listWeather.Count());
             Assert.IsNotNull(res);
-            Assert.AreEqual(res.First().Country, listWeather.First().Country);
-            Assert.AreEqual(res.First().City, listWeather.First().City);
-            Assert.AreEqual(res.First().Temperature, listWeather.First().Temperature);
+            Assert.That(res.First().Country == listWeather.First().Country);
+            Assert.That(res.First().City == listWeather.First().City);
+            Assert.That(res.First().Temperature == listWeather.First().Temperature);
         }
 
         [Test]
@@ -67,7 +66,7 @@ namespace Essilor.ProjetApiTets.Business
             }.AsQueryable();
 
             Mock<IWeatherRepository> mockedRepository = new Mock<IWeatherRepository>() { CallBase = true };
-            WeatherBusiness mockedBusiness = new WeatherBusiness(mockedRepository.Object);
+            WeatherService mockedBusiness = new WeatherService(mockedRepository.Object);
 
             // act
             mockedRepository.Setup(c => c.GetWeatherByCountry(It.IsAny<string>())).Returns(listWeather);
@@ -76,11 +75,11 @@ namespace Essilor.ProjetApiTets.Business
             //Assert
 
             var resaltUS = res.Where(c => c.Country == country);
-            Assert.AreEqual(resaltUS.Count(), listWeather.Where(c => c.Country == country).Count());
+            Assert.That(resaltUS.Count() == listWeather.Where(c => c.Country == country).Count());
             Assert.IsNotNull(resaltUS);
-            Assert.AreEqual(resaltUS.First().Country, listWeather.Where(c => c.Country == country).First().Country);
-            Assert.AreEqual(resaltUS.First().City, listWeather.Where(c => c.Country == country).First().City);
-            Assert.AreEqual(resaltUS.First().Temperature, listWeather.Where(c => c.Country == country).First().Temperature);
+            Assert.That(resaltUS.First().Country == listWeather.Where(c => c.Country == country).First().Country);
+            Assert.That(resaltUS.First().City == listWeather.Where(c => c.Country == country).First().City);
+            Assert.That(resaltUS.First().Temperature == listWeather.Where(c => c.Country == country).First().Temperature);
 
 
         }
