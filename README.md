@@ -1,12 +1,13 @@
 # ASP.NET CORE WEBAPI Sample with swagger
 
 # Introduction
- This is a short tutorial demonstrate how you can create a web api as micro service
+ This short tutorial demonstrate how you can create a web api as micro service
  and cover your code with unit test and how you can use the principle of clean code.
  
 The purpose of this example is to use the NoSQL data to display 
 the temperatures of the different country and city, 
-after adding a little parameter is to display the country temperature chosen by the user.
+the user can search the temperature by specifying the country.
+
 
 # Installation
   You must download the code from git and use visual studio 2017 (you can download Vs2017 from    https://visualstudio.microsoft.com/fr/downloads/) to open it
