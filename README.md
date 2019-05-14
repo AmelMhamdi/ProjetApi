@@ -1,7 +1,7 @@
 # ASP.NET CORE WEBAPI Sample with swagger
 
 # Introduction
- This short tutorial demonstrate how you can create a web api as micro service
+ This short tutorial demonstrates how you can create a web api as micro service
  and cover your code with unit test and how you can use the principle of clean code.
  
 The purpose of this example is to use the NoSQL data to display 
